@@ -1,13 +1,13 @@
 #include<iostream>
 #include<string.h>
 
+uint64_t j = 0;
+uint8_t rng;
 std::string word;
 int main(int argc, const char **argv) {
 	srand(time(0));
         std::cout << "Input:";
-        std::cin >> word;
-        uint64_t j = 0;
-	uint8_t rng;
+        std::cin >> word;  
         for(uint8_t i=0;i<word.length();){
                 rng = rand() % 255 - 32;
                 if((char)rng == word[i]){
